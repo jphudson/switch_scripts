@@ -16,7 +16,10 @@ output supression for subprocess.call comes from stackoverflow user jdi
 on thread named How to hide output of subprocess in Python 2.7
 '''
 
-#Since these are dict they aren't in a particular order when using the for loop
+'''
+	Since these are dict they aren't in a particular order when using the for loop
+	Will likely convert this info into a yaml file
+''' 
 
 # 'Device name':'Device ip address to ping'
 device_list = {
@@ -38,7 +41,7 @@ port_map = {
 	}
 
 platform = 'cisco_ios'
-username = 'your_username'
+username = 'your_username' #alternativly can ask for username using raw_input("Enter Username: ")
 password = getpass("Enter Password: ")
 
 def bounce_port(ip_addr, port):
@@ -60,7 +63,8 @@ def bounce_port(ip_addr, port):
 
 for machine in device_list:
 	'''
-
+		Attempts to ping the device.  If ping fails it calls bounce_port then waits before trying to 
+		ping again.
 	'''
 	FNULL = open(os.devnull, 'w')
 	ping_command = subprocess.call(['ping', '-c', '1', device_list[machine]], stdout=FNULL, stderr=subprocess.STDOUT)
