@@ -17,8 +17,11 @@ on thread named How to hide output of subprocess in Python 2.7
 '''
 
 '''
-	Since these are dict they aren't in a particular order when using the for loop
-	Will likely convert this info into a yaml file
+	Note: Since these are dictionaries they aren't in a particular order when the for loop is run
+
+	Will likely convert this info into a yaml file so it's a little less clunky and
+	that way I can have an argument when running the switch to select a yaml file incase I have
+	different lists that need to use the script
 ''' 
 
 # 'Device name':'Device ip address to ping'
