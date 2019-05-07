@@ -1,9 +1,12 @@
 '''
 	Pings a group of devices and if any of them fail to respond the script attempts to
-	log into the switch and bounce the port
+	log into the switch and bounce the port.
 
 	Had a group of legacy devices that periodically would lose their ip address.  
-	Bouncing the port would resolve the issue 
+	Bouncing the port would resolve the issue.
+	
+	Wrote this script in a pinnch so this isn't the prettiest script and definitly not efficient,
+	there's plenty of optimizations to be made that I'll likely address in the future if it's needed
 '''
 
 import subprocess, os
